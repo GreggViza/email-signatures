@@ -172,7 +172,7 @@ function signatureHTML(p){
       <div style="font-size:16px;font-weight:700;color:#002E5D;letter-spacing:.3px;line-height:1.2;">${p.name}</div>
       <div style="font-size:11px;font-weight:700;color:#002E5D;text-transform:uppercase;letter-spacing:1px;padding-top:3px;">${p.title}</div>
       ${p.frontdesk ? '' : `<div style="font-size:12px;color:#002E5D;font-weight:600;padding-top:7px;">North Fork Resort</div>`}
-      <div style="font-size:11px;padding-top:${p.frontdesk ? '7px' : '2px'};"><a href="https://www.google.com/maps/search/?api=1&query=690+Queen+Street+Greenport+NY+11944" style="color:#7F7F7F;text-decoration:none;"><span style="color:#7F7F7F;">690 Queen Street, Greenport, NY 11944</span></a></div>
+      <div style="font-size:11px;padding-top:${p.frontdesk ? '7px' : '2px'};"><span style="color:#7F7F7F;">${obf("690 Queen Street, Greenport, NY 11944")}</span></div>
       <div style="font-size:11px;color:#7F7F7F;padding-top:5px;"><span style="color:#7F7F7F;">${obf("Office")}&nbsp;</span><a href="${telHref(p.office)}" style="color:#7F7F7F;text-decoration:none;"><span style="color:#7F7F7F;">${obf(p.office)}</span></a>${p.mobile ? `<span style="color:#7F7F7F;">&nbsp;&bull;&nbsp;${obf("Mobile")}&nbsp;</span><a href="${telHref(p.mobile)}" style="color:#7F7F7F;text-decoration:none;"><span style="color:#7F7F7F;">${obf(p.mobile)}</span></a>` : ''}</div>
       <div style="font-size:11px;padding-top:5px;"><a href="mailto:${p.email}" style="color:#002E5D;text-decoration:none;font-weight:600;"><span style="color:#002E5D;">${p.email}</span></a><span style="color:#7F7F7F;">&nbsp;|&nbsp;</span><a href="https://nfresort.com" style="color:#002E5D;text-decoration:none;font-weight:600;"><span style="color:#002E5D;">nfresort.com</span></a></div>
     </td>
